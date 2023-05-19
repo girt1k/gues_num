@@ -1,16 +1,22 @@
 const input = document.querySelector("input"),
     guess = document.querySelector(".guess"),
     checkbutton = document.querySelector("button"),
-    remeainChances = document.querySelector(".chances");
+    remeainChances = document.querySelector(".chances"),
+    chanceValue = document.getElementById("btnlvl");
 
 input.focus();
 
 let randomNum = Math.floor(Math.random() * 100)
-chance = 10;
+
+let GameStart = 0;
+
+chance = addEventListener("click", chanceValue.value);
+
 
 checkbutton.addEventListener("click" , () => {
     chance--;
     let inputValue = input.value;
+    GameStart = 1;
 
     if(inputValue == randomNum){
         [guess.textContent, input.disabled] = ["Поздравляем!", true];
@@ -29,8 +35,13 @@ checkbutton.addEventListener("click" , () => {
     if(chance == 0){
         [checkbutton.textContent, input.disabled, inputValue] = ["Переиграть", true, ""]
         [guess.textContent, guess.style.color] = ["Вы проиграли!", "#DE0611"];
+        GameStart = 0;
     }
-    if(chance == 0){
+    if(chance <= 0){
         window.location.reload();
     }
 });
+
+if(GameStart == 1){
+    level.style.display = "none"
+}

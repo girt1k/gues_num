@@ -63,3 +63,20 @@ cursor: not-allowed;
 .input-field button:active {
     transform: scale(0.97);
 }
+
+.level{
+    background: rgb(212, 212, 212);
+    padding: 10px;
+    border-radius: 12px;
+    display: block;
+}
+
+.btnLvl{
+    width: 85px;
+    height: 39px;
+    padding: 2px;
+    margin: 10px;
+    margin-top: 4px;
+    margin-bottom: 0;
+    background-color: #026bff5c;
+}

@@ -15,12 +15,31 @@
 <body>
     <div class="wrapper">
         <p>Угадай число от 1 до 100</p>
+
+        <div class="level">
+            <button class="btnLvl" onclick="playerLvl" value="">
+                <p>Easy</p>
+            </button>
+
+            <button class="btnLvl" onclick="playerLvl" value="7">
+                <p>Medium</p>
+            </button>
+
+            <button class="btnLvl" onclick="playerLvl" value="5">
+                <p>Hard</p>
+            </button>
+
+            <button class="btnLvl" onclick="playerLvl" value="4">
+                <p>Imposible</p>
+            </button>
+        </div> 
+
         <p class="guess"></p>
         <div class="input-field">
             <input type="number" placeholder="Введите число">
             <button id="btn">Проверить</button>
         </div>
-        <p>У вас осталось <span class="chanses">10</span> попыток</p>
+        <p>У вас осталось <span class="chances">10</span> попыток</p>
     </div>
 <script src="index.js"></script>
 </body>
