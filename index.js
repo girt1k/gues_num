@@ -2,7 +2,7 @@ const input = document.querySelector("input"),
     guess = document.querySelector(".guess"),
     checkbutton = document.querySelector("button"),
     remeainChances = document.querySelector(".chances"),
-    chanceValue = document.getElementById("btnlvl");
+    chanceValue = document.getElementsByName("difficulty");
 
 input.focus();
 
